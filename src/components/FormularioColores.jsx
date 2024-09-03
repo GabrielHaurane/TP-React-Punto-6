@@ -47,19 +47,21 @@ const FormularioColores = () => {
           </Button>
         </Card.Footer>
       </Card>
-        <div className="d-flex flex-wrap w-100">
-          {paletaColor.map((itemsColor, posicionColor) => (
-            <Card key={posicionColor} className="mb-3 mx-2 col-12 col-md-3 col-lg-2 ">
-                <ItemColor
-                  color={itemsColor}
-                ></ItemColor>
-                <Card.Footer className="d-flex justify-content-end">
-            <Button variant="danger" onClick={()=>borrarColor(itemsColor)}>Borrar</Button>
+      <div className="d-flex flex-wrap w-100">
+        {paletaColor.map((itemsColor, posicionColor) => (
+          <Card
+            key={posicionColor}
+            className="mb-3 mx-2 col-12 col-md-3 col-lg-2 "
+          >
+            <ItemColor color={itemsColor}></ItemColor>
+            <Card.Footer className="d-flex justify-content-end">
+              <Button variant="danger" onClick={() => borrarColor(itemsColor)}>
+                Borrar
+              </Button>
             </Card.Footer>
-            </Card>
-          ))}
-        </div>
-      
+          </Card>
+        ))}
+      </div>
     </>
   );
 };
